@@ -1,0 +1,80 @@
+{
+  "height": 10,
+  "position": "top",
+  "margin": 4,
+  "modules-left": ["clock"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["hyprland/language", "custom/pacman", "network", "pulseaudio"],
+  // Modules configuration
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+    },
+    "format-icons": {
+      "default": "",
+      "urgent": "",
+      "active": ""
+    }
+  },
+  "clock": {
+    "format": "{:%a %d %b %I:%M%p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  // "battery": {
+  //   "states": {
+  //     "warning": 30,
+  //     "critical": 15
+  //   },
+  //   "format": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
+  //   "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
+  //   "format-critical": "<span size='13000' foreground='#E38C8F'>{icon}</span> {capacity}%",
+  //   "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+  //   "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+  //   "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {time}",
+  //   "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
+  //   "format-icons": ["", "", "", "", ""],
+  //   "tooltip-format": "{time}"
+  // },
+  "network": {
+    "format-ethernet": "<span size='13000' foreground='#e0e0e0'>󰈀 </span>",
+    "format-linked": "{ifname} (No IP)  ",
+    "format-disconnected": "<span size='13000' foreground='#e0e0e0'></span>No internet",
+  },
+  "pulseaudio": {
+    // "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click": "pavucontrol",
+    "format": "<span size='13000' foreground='#e0e0e0'>{icon}</span>{volume}%",
+    "format-muted": "<span size='14000' foreground='#e0e0e0'></span>",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [" ", " "]
+    }
+  },
+  "hyprland/language": {
+    "format": "{short}"
+  },
+  "custom/pacman": {
+    "format": "{icon}{}",
+    "return-type": "json",
+    "on-click": "kitty --execute yay -Syu",
+    "format-icons": {
+      "pending-updates": "󰻌 ",
+      "updated": "󰕥"
+    },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates"
+},
+
+}
