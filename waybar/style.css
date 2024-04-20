@@ -7,7 +7,6 @@
 window#waybar {
     background: rgba(0, 0, 0, 1);
     border-radius: 12px;
-    color: #e0e0e0; 
 }
 
 tooltip {
@@ -22,6 +21,12 @@ tooltip {
     padding-right: 6.5px;
 }
 
+#workspaces button.active {
+}
+
+#workspaces button.urgent {
+}
+
 #workspaces button {
     /* padding: 10px; */
     padding-left: 11px;
@@ -29,17 +34,10 @@ tooltip {
     color: #e0e0e0;
 }
 
-#workspaces button.active {
-    color: #e0e0e0;
-}
-
-#workspaces button.urgent {
-    color: lightgray;
-}
-
-#clock, #battery, #pulseaudio, #workspaces, #mpd, #language, #custom-pacman  {
+#clock, #battery, #pulseaudio, #network, #workspaces, #mpd, #language, #custom-pacman  {
     margin-top: 2px;
     margin-bottom: 2px;
+    color: #e0e0e0;
 }
 
 #pulseaudio {
