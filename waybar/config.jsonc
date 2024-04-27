@@ -6,7 +6,7 @@
   "margin-top": 4,
   "modules-left": ["clock"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["hyprland/language", "custom/pacman", "network", "pulseaudio"],
+  "modules-right": ["hyprland/language", "custom/pacman", "network", "battery", "backlight", "pulseaudio"],
   // Modules configuration
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -29,25 +29,25 @@
     "format": "{:%a %d %b %I:%M%p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
-  // "battery": {
-  //   "states": {
-  //     "warning": 30,
-  //     "critical": 15
-  //   },
-  //   "format": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
-  //   "format-warning": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {capacity}%",
-  //   "format-critical": "<span size='13000' foreground='#E38C8F'>{icon}</span> {capacity}%",
-  //   "format-charging": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-  //   "format-plugged": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-  //   "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon}</span> {time}",
-  //   "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
-  //   "format-icons": ["", "", "", "", ""],
-  //   "tooltip-format": "{time}"
-  // },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span size='13000'>{icon}</span> {capacity}%",
+    "format-warning": "<span size='13000'>{icon}</span> {capacity}%",
+    "format-critical": "<span size='13000'>{icon}</span> {capacity}%",
+    "format-charging": "<span size='13000'> </span>{capacity}%",
+    "format-plugged": "<span size='13000'> </span>{capacity}%",
+    "format-alt": "<span size='13000'>{icon}</span> {time}",
+    "format-full": "<span size='13000'> </span>{capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{time}"
+  },
   "network": {
     "format-ethernet": "<span size='13000'>󰈀 </span>",
     "format-linked": "{ifname} (No IP)  ",
-    "format-disconnected": "<span size='13000'></span>No internet",
+    "format-disconnected": "<span size='13000'> </span>No internet",
   },
   "pulseaudio": {
     // "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
@@ -77,6 +77,11 @@
     },
     "exec-if": "which waybar-updates",
     "exec": "waybar-updates"
-},
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}{percent}%",
+    "format-icons": [" ", " "]
+  },
 
 }

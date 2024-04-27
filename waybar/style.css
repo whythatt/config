@@ -10,7 +10,6 @@ window#waybar {
 }
 
 tooltip {
-	/* background: black; */
 	border-radius: 15px;
 	border-width: 2px;
 	border-style: solid;
@@ -34,26 +33,14 @@ tooltip {
     color: #e0e0e0;
 }
 
-#clock, #battery, #pulseaudio, #network, #workspaces, #mpd, #language, #custom-pacman  {
-    margin-top: 2px;
-    margin-bottom: 2px;
+#clock, #battery, #pulseaudio, #network, #workspaces, #mpd, #language, #custom-pacman, #backlight {
+    margin-top: 0px;
+    margin-bottom: 0px;
     color: #e0e0e0;
 }
 
-#pulseaudio {
+#pulseaudio, #battery, #backlight, #custom-pacman, #language, #network {
     margin-right: 12px;
-}
-
-#custom-pacman {
-    margin-right: 13px;
-}
-
-#language {
-    margin-right: 10px;
-}
-
-#network {
-    margin-right: 6px;
 }
 
 #clock {
