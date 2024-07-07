@@ -9,9 +9,7 @@ null_ls.setup({
 		formatting.djlint,
 		formatting.black,
 		formatting.stylua,
-		formatting.html,
-		formatting.css,
-		formatting.tsserver,
+		formatting.prettier,
 	},
 	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then

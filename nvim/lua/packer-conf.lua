@@ -24,6 +24,7 @@ return require("packer").startup({
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"neovim/nvim-lspconfig",
+			"jose-elias-alvarez/null-ls.nvim",
 		})
 		use({ "stevearc/conform.nvim" })
 		-- nvim-cmp

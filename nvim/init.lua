@@ -13,7 +13,7 @@ require("conform-conf")
 -- lsp-config
 require("lsp-config.cmp-config")
 require("lsp-config.lsp-config")
--- require("lsp-config.null-ls-conf")
+require("lsp-config.null-ls-conf")
 --cursorline
 require("nvim-cursorline-conf")
 require("autoclose-conf")
